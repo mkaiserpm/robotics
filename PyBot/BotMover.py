@@ -61,8 +61,8 @@ class WheelEncoder():
         '''
         Calculates Distance traveled by centerpoint (two wheels)
         '''
-        Dleft = self.getDwheel(ticksleft)
-        Dright = self.getDheel(ticksright)
+        Dleft = self.getDwheel(ticksleft,robot)
+        Dright = self.getDwheel(ticksright,robot)
         Dcenter = (Dleft + Dright) / 2
         robophi = robot.phi #current robot orientation
         robox = robot.x
