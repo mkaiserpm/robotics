@@ -253,13 +253,13 @@ if __name__ == "__main__":
     while True:
         print(mpu.get_temp())
         accel_data = mpu.get_accel_data()
-        print("accel_x: %.4f"%(accel_zero['x'] - accel_data['x']))
-        print("accel_y: %.4f"%(accel_zero['y'] - accel_data['y']))
-        print("accel_z: %.4f"%(accel_zero['z'] - accel_data['z']))
+        print("accel_x: %.4f"%(accel_data['x']))
+        print("accel_y: %.4f"%(accel_data['y']))
+        print("accel_z: %.4f"%(accel_data['z']))
         gyro_data = mpu.get_gyro_data()
-        print("gyro_x: %.4f"%(gyro_zero['x'] - gyro_data['x']))
-        print("gyro_y: %.4f"%(gyro_zero['y'] - gyro_data['y']))
-        print("gyro_z: %.4f"%(gyro_zero['z'] - gyro_data['z']))
-        time.sleep(0.1)
+        print("gyro_x: %.4f"%(gyro_data['x']))
+        print("gyro_y: %.4f"%(gyro_data['y']))
+        print("gyro_z: %.4f"%(gyro_data['z']))
+        time.sleep(0.05)
         
 
