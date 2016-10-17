@@ -248,8 +248,8 @@ class mpu6050:
 
 if __name__ == "__main__":
     mpu = mpu6050(0x68)
+    print("Temp , acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z")
     while True:
-        print("Temp , acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z")
         print(mpu.get_temp()),
         accel_data = mpu.get_accel_data()
         print(accel_data['x']),
@@ -259,7 +259,7 @@ if __name__ == "__main__":
         print(gyro_data['x']),
         print(gyro_data['y']),
         print(gyro_data['z']),
-        print("\r")
+        print("%.4f\r"%(gyro_data['z'])),
         time.sleep(0.5)
         
 
