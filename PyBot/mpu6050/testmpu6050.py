@@ -10,7 +10,7 @@ Created on 17.10.2016
 import smbus
 import math
 import time
-from mpu6050.mpu6050 import accel_zero
+
 
 # Register
 power_mgmt_1 = 0x6b
@@ -88,7 +88,6 @@ accel_z = read_word_2c(0x3f)
 while True:
     
     execute_(accel_x,accel_y,accel_z)
-    accel_zero
     time.sleep(0.5)
     
 
