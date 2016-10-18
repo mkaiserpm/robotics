@@ -87,7 +87,7 @@ accel_y = read_word_2c(0x3d)
 accel_z = read_word_2c(0x3f)
 while True:
     
-    execute_(accel_x,accel_y,accel_z)
+    execute_(0,0,0)
     time.sleep(0.5)
     
 
